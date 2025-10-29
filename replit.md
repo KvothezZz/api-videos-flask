@@ -32,6 +32,7 @@ Provides a simple REST API for video processing operations using the MoviePy lib
 - Temporary file handling for safe processing
 - Error handling with descriptive JSON responses
 - Demo processing: extracts first 5 seconds of uploaded video
+- File size enforcement (100MB limit) to prevent DoS attacks
 
 ## Recent Changes
 - **2025-10-29**: Initial project setup with Flask and MoviePy
@@ -39,6 +40,8 @@ Provides a simple REST API for video processing operations using the MoviePy lib
   - Implemented video render endpoint with file upload
   - Added video format validation
   - Configured for deployment on port 5000
+  - Added file size enforcement with MAX_CONTENT_LENGTH
+  - Implemented custom 413 error handler for oversized uploads
 
 ## Dependencies
 - Flask 3.0.0
